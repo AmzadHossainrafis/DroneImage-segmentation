@@ -9,6 +9,6 @@ Jinja2
 Werkzeug
 gunicorn
 albumentations    
-PIL
+pillow
 
 -e .

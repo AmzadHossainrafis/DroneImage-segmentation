@@ -8,8 +8,4 @@ Flask
 gunicorn
 albumentations    
 pillow
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.11.0+cpu
---find-links https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.12.0+cpu
--e .
+torch==2.0.1 --index-url https://download.pytorch.org/whl/cputorch==1.11.0+cpu

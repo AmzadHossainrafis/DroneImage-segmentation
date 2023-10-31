@@ -133,4 +133,5 @@ project/
 wandb/
 tasks.docx
 
-dataset/ 
+dataset/CamVid/*
+dataset/DronData/* 

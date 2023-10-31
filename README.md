@@ -1,6 +1,11 @@
 
 ![Alt text](fig/image/github-header-image.png)
 
+<p align="center">
+This project still undrer development and will be updated soon. demo train is vailable in the notebook/trail.ipynb  file.
+if you have any question please contact me at [email](mailto:amzad.rafi@northsouth.edu) or [linkedin](https://www.linkedin.com/in/amzad-rafi-0b0b0a1a0/)
+</p>
+
 # Drone Image Segmentation Project 
 live demo avilable [here](http://ec2-3-15-40-216.us-east-2.compute.amazonaws.com:8080/)
 ## Project Overview

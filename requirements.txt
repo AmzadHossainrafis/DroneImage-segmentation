@@ -1,0 +1,15 @@
+pandas 
+pytest
+numpy 
+requests
+tqdm
+matplotlib 
+Flask
+Jinja2
+Werkzeug
+gunicorn
+albumentations    
+PIL
+
+.e 
+

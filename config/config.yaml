@@ -1,0 +1,59 @@
+Dir : 
+  root : /home/username/Projects/ProjectName 
+  data_path : C:\Users\Amzad\Desktop\camvid-segmentation\dataset\DronData/
+  original_data_path : C:\Users\Amzad\Desktop\camvid-segmentation\dataset\DronData\dataset\semantic_drone_dataset\original_images/
+  label_path : C:\Users\Amzad\Desktop\camvid-segmentation\dataset\DronData\dataset\semantic_drone_dataset\label_images_semantic/
+
+Callback_config: 
+
+  aritifact_path : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/
+  model_ckpt : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts\model_ckpt/
+  log_dir : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts\logs/
+  fig : C:\Users\Amzad\Desktop\camvid-segmentation\fig/
+
+Train_config : 
+
+  batch_size : 20
+  num_epochs : 10
+  learning_rate : 0.0001
+  momentum : 0.9
+  weight_decay : 0.0005
+  num_workers : 0
+  print_freq : 10
+  save_freq : 10
+  
+
+Model_config : 
+
+  model_name : Unet
+  num_classes : 22
+
+
+Transform_config: 
+  
+  image_size : 512
+  horizontal_flip_prob : 0.5
+  vertical_flip_prob : 0.5 
+  blur_prob : 0.1 
+  blur_limit : 0.3
+  rotate : 0.1
+  scale_limit : 0.2
+  rotate_limit : 20
+  shift_limit : 0.1
+  p : 0.5
+  border_mode : 0
+
+Data_injection :
+  train_split : 0.8
+  val_split : 0.1
+  test_split : 0.1
+  train_csv : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/train.csv
+  val_csv : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/val.csv
+  test_csv : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/test.csv
+
+
+
+
+
+
+  

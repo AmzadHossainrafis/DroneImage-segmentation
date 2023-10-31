@@ -19,9 +19,4 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("cnnClassifierLogger")
-
-
-
-if __name__ == "__main__":
-    logger.info("Hello World")
+logger = logging.getLogger("Camvid_segmentation")

@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 import PIL.Image as Image
 from utils.common import * 
+from Camvid_segmentation import logger 
+from tqdm import tqdm
 
 
 
@@ -46,14 +48,21 @@ class DataIjection():
             train_split = self.injection_config["train_split"]
             test_split = self.injection_config["test_split"]
             val_split = self.injection_config["val_split"]
+            #add tqdm animation 
+            logger.info("Data injection started ")
+            for i in tqdm(range(100), desc="Data injection in progress"):
+                pass
 
             train, test, val = np.split(X, [int(train_split*len(X)), int((train_split+test_split)*len(X))])
             train_ds = pd.DataFrame(train, columns=["id"])
             train_ds.to_csv(self.injection_config['train_csv'], index=False)
+            logger.info("train.csv created successfully")
             test_ds = pd.DataFrame(test, columns=["id"])
             test_ds.to_csv(self.injection_config['test_csv'], index=False)
+            logger.info("test.csv created successfully")
             val_ds = pd.DataFrame(val, columns=["id"])
             val_ds.to_csv(self.injection_config['val_csv'], index=False)
+            logger.info("val.csv created successfully")
 
             #logger.info("Data injection completed successfully")
             return train, test, val

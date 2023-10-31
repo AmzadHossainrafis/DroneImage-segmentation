@@ -1,5 +1,6 @@
 import albumentations as A 
 from utils.common import read_yaml 
+from components import logger 
 
 config = read_yaml("../../../config/config.yaml") 
 
@@ -35,12 +36,12 @@ class Transform(object):
             raise ValueError(f'Invalid transform type {self.transform_type}')
 
     def train_transforms(self):
-
-
         """
         Please add all the transforms here or comment out the transforms that you don't want to use 
 
         """
+
+        logger.info("Training transforms returned")
         return A.Compose([
             A.Resize(self.transform_config["image_size"], self.transform_config["image_size"]),
             A.HorizontalFlip(self.transform_config["horizontal_flip_prob"]),
@@ -63,3 +64,6 @@ class Transform(object):
         ])  
     
 
+if __name__ == "__main__":
+    transform = Transform("train").get_transforms()
+    print(transform)

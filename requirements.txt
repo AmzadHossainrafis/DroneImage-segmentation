@@ -11,5 +11,4 @@ gunicorn
 albumentations    
 PIL
 
-.e 
-
+-e .

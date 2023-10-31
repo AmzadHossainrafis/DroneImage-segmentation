@@ -5,10 +5,8 @@ requests
 tqdm
 matplotlib 
 Flask
-Jinja2
-Werkzeug
 gunicorn
 albumentations    
 pillow
-torch
+torch== 2.1.0+cpu
 -e .

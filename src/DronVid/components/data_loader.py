@@ -1,14 +1,13 @@
-import torch 
 import numpy as np
 from PIL import Image 
 from torch.utils.data import Dataset
 import albumentations as A
-from utils.common import read_yaml, create_df
-import logging
+from utils.common import read_yaml
+
 # from data_transformation import Transform
 
 config = read_yaml("../../../config/config.yaml") 
-logger = logging.getLogger(__name__) 
+
 
 ''' 
 Bug report: 

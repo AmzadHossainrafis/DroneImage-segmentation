@@ -9,7 +9,7 @@ This project still undrer development and will be updated soon. demo train is va
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if you have any question please contact me at [email](mailto:amzad.rafi@northsouth.edu) or [linkedin](https://www.linkedin.com/in/amzad-rafi-0b0b0a1a0/)
 
 # Drone Image Segmentation Project 
-live demo avilable [here](http://ec2-3-15-40-216.us-east-2.compute.amazonaws.com:8080/)
+live demo avilable [here](https://drone-seg-ac10035f73bf.herokuapp.com/)
 ## Project Overview
 
 This is a PyTorch-based project for drone image segmentation. The goal of this project is to segment objects and regions of interest within aerial images captured by drones. Image segmentation is a crucial task in computer vision and has various applications, including agriculture, urban planning, and environmental monitoring.

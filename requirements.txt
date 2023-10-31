@@ -10,5 +10,5 @@ Werkzeug
 gunicorn
 albumentations    
 pillow
-
+torch
 -e .

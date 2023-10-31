@@ -31,15 +31,16 @@ This dataset is avilable in kaggle [here](https://www.kaggle.com/insaff/massachu
  1. Clone the repository    
     ```bash
     $ git clone <clone link >
+  
+
     ```
 
  2. Create a virtual environment and activate it using this command 
     ```bash
        $ conda create -n <env_name> python=<Python virsion>
-
     ```
 
-3. Install the required packages 
+1. Install the required packages 
     ```bash
         $ pip install -r requirements.txt
     ```
@@ -62,6 +63,7 @@ Please confirm all the configurations in the `config.py` file before training.
 
 1. Run the following command to train the model 
 ```bash
+    $ cd src\DronVid\components
     $ python train.py 
 
 ```
@@ -75,7 +77,7 @@ if all the configaration is set properly you can run the following command to te
 
 ## Results 
 
-    1. The model was trained for 10 epochs with batch size of 4 and learning rate of 0.001.
+1. The model was trained for 10 epochs with batch size of 4 and learning rate of 0.001.
 
 
 

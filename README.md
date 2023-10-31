@@ -3,8 +3,10 @@
 
 <p align="center">
 This project still undrer development and will be updated soon. demo train is vailable in the notebook/trail.ipynb  file.
-if you have any question please contact me at [email](mailto:amzad.rafi@northsouth.edu) or [linkedin](https://www.linkedin.com/in/amzad-rafi-0b0b0a1a0/)
+
 </p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if you have any question please contact me at [email](mailto:amzad.rafi@northsouth.edu) or [linkedin](https://www.linkedin.com/in/amzad-rafi-0b0b0a1a0/)
 
 # Drone Image Segmentation Project 
 live demo avilable [here](http://ec2-3-15-40-216.us-east-2.compute.amazonaws.com:8080/)
@@ -14,8 +16,10 @@ This is a PyTorch-based project for drone image segmentation. The goal of this p
 
 ## Data description 
 
-This dataset is avilable in kaggle [here](https://www.kaggle.com/insaff/massachusetts-roads-dataset). The dataset contains 1100 images of size 1500x1500 pixels. Each image has a corresponding label image of the same size. The label image contains 22 classe
+This dataset is avilable in kaggle [here](https://www.kaggle.com/insaff/massachusetts-roads-dataset). The dataset contains 1100 images of size 1500x1500 pixels. Each image has a corresponding label image of the same size. The label image contains 22 classe. The following figure shows an example of an image and its corresponding label image.
 
+
+![Alt text](fig/image/data-demo.png)
 
 ## Pre requirments 
  

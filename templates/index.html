@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Drone Image segmentation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+
+</head>
+<body bgcolor="pink">  
+
+<h1 class="title_text"> Drone image segmentation </h1>
+
+<h2 style="text-align: center; "> Upload your image </h2>
+
+<form action="upload.php" method="post" enctype="multipart/form-data" style="text-align: center; ">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" style="text-align: center; " value="Upload Image" name="submit">
+</form>
+
+    <footer>
+        <div style="text-align: center;">
+            <p>Connect with me:</p>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/your-github-profile"><i class="fa fa-github"></i></a>
+            <a href="https://www.facebook.com/your-facebook-profile"><i class="fa fa-facebook"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

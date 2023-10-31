@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    margin-top: auto;
+}
+input[type="submit"] {
+    background-color: #19cc1f; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 24px; /* Adjust size as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+
+.title_text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.round-button {
+    border-radius: 50%; /* Makes the button round */
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+}

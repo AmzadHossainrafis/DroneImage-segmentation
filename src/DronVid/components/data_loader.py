@@ -20,8 +20,6 @@ Bug report:
 '''
 
 
-
-
 class DroneDataset(Dataset):
     '''
     DroneDataset class for loading the dataset 

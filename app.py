@@ -8,9 +8,7 @@ def index():
 
 
 #api request  
-@app.route('/predict', methods=['POST'])  
-def predict():  
-    if request.method == 'POST':  
-        f = request.files['file']  
-        f.save(f.filename)  
-        return render_template('index.html', label=label)
+
+
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0',port=5000)

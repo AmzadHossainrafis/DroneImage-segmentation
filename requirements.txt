@@ -1,3 +1,4 @@
+--index-url https://download.pytorch.org/whl/cpu
 pandas 
 pytest
 numpy 
@@ -8,5 +9,5 @@ Flask
 gunicorn
 albumentations    
 pillow
-torch== 2.1.0+cpu
+torch==2.1.0+cpu
 -e .

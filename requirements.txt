@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 pandas 
 pytest
 numpy 
@@ -8,4 +9,5 @@ Flask
 gunicorn
 albumentations    
 pillow
-https://download.pytorch.org/whl/cpu/torch-1.3.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
+torch==1.7.1+cu110
+

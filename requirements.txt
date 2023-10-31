@@ -9,5 +9,6 @@ Flask
 gunicorn
 albumentations    
 pillow
-torch==2.1.0+cpu
+torch==2.1.0 
+
 -e .

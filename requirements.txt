@@ -1,4 +1,4 @@
---index-url https://download.pytorch.org/whl/cpu
+-f https://download.pytorch.org/whl/torch_stable.html
 pandas 
 pytest
 numpy 
@@ -9,6 +9,7 @@ Flask
 gunicorn
 albumentations    
 pillow
-torch==2.1.0 
+torch==1.8.1+cpu
+torchvision==0.9.1+cpu
 
 -e .

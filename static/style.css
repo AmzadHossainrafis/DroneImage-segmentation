@@ -38,3 +38,31 @@ input[type="submit"] {
     width: 50px; /* Adjust width as needed */
     height: 50px; /* Adjust height as needed */
 }
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.upload-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+.prediction-mask {
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    font-size: medium;
+    font-weight: bold;
+}

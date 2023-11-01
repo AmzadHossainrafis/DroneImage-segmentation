@@ -12,26 +12,36 @@
 
 
 </head>
-<body bgcolor="pink">  
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='data-demo.png') }}" alt="mask" width="100%" height="200">
+        <h1 class="title_text">Drone image segmentation</h1>
+        <h2 style="text-align: center;">by <a href="https://www.linkedin.com/in/amzadhossain880/">AMZAD HOSSAIN RAFI</a></h2>
 
-<h1 class="title_text"> Drone image segmentation </h1>
+<div class="container">
+<h3>Project Overview</h3>
+<p >This is a PyTorch-based project for drone image segmentation. The goal of this project is to segment objects and regions of interest within aerial images captured by drones. Image segmentation is a crucial task in computer vision and has various applications, including agriculture, urban planning, and environmental monitoring.</p>
+</div>  
+</header>
 
-<h2 style="text-align: center; "> Upload your image </h2>
+    <main class="centered-content">
+        <h2>Upload your image</h2>
 
-<form action="upload.php" method="post" enctype="multipart/form-data" style="text-align: center; ">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" style="text-align: center; " value="Upload Image" name="submit">
-</form>
+        <form class="upload-form" action='/' method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagefile">
+            <input class="btn btn-primary mt-3" type="submit" value="Predict Image">
+        </form>
 
-    <footer>
-        <div style="text-align: center;">
-            <p>Connect with me:</p>
-            <a href="https://www.linkedin.com/in/your-linkedin-profile/"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/your-github-profile"><i class="fa fa-github"></i></a>
-            <a href="https://www.facebook.com/your-facebook-profile"><i class="fa fa-facebook"></i></a>
+        <div class="prediction-mask">
+            <h2>Prediction Mask</h2>
+            <img src="{{ url_for('static', filename='mask.png') }}" alt="mask" width="500" height="500">
         </div>
-    </footer>
+    </main>
 
+    <footer class="centered-content">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/amzadhossain880/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/AmzadHossainrafis"><i class="fa fa-github"></i></a>
+    </footer>
 </body>
 </html>

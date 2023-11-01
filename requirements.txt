@@ -1,6 +1,9 @@
 -f https://download.pytorch.org/whl/torch_stable.html
+pandas 
+pytest
 numpy 
 requests
+tqdm
 matplotlib 
 Flask
 gunicorn

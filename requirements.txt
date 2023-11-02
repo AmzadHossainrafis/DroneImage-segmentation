@@ -1,4 +1,6 @@
 -f https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.1+cpu 
+torchvision==0.9.1+cpu
 pandas 
 pytest
 numpy 
@@ -9,6 +11,5 @@ Flask
 gunicorn
 albumentations    
 pillow
-torch==1.11.0+cpu
-torchvision==0.12.0+cpu
+
 -e .

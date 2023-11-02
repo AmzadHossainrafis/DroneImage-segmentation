@@ -92,3 +92,5 @@ the deployment is done in heruko and the live demo is avilable [here](https://dr
     3. create new env secrate in github and add the api key in the env secrate
     4. open .github\workflows\main.yml file and change the app name and  add your heruko email 
 
+![Alt text](<fig/image/deploy img.png>)
+

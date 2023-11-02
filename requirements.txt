@@ -8,6 +8,6 @@ Flask
 gunicorn
 albumentations    
 pillow
-torch==1.5.1+cpu
+https://download.pytorch.org/whl/cpu//torch-1.7.0%2Bcpu-cp38-cp38-win_amd64.whl
 torchvision==0.12.0+cpu
 -e .

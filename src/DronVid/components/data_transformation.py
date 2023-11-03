@@ -1,6 +1,6 @@
 import albumentations as A 
 from utils.common import read_yaml 
-from components import logger 
+from utils.logger import logger
 
 config = read_yaml("../../../config/config.yaml") 
 
@@ -8,8 +8,8 @@ config = read_yaml("../../../config/config.yaml")
 
 '''
 TODO: 
-    transform class for training and validation data 
-    all the transforms must be user defined 
+    transform class for training and validation data -done 
+    all the transforms must be user defined -done
 
 '''
 
@@ -42,6 +42,7 @@ class Transform(object):
         """
 
         logger.info("Training transforms returned")
+
         return A.Compose([
             A.Resize(self.transform_config["image_size"], self.transform_config["image_size"]),
             A.HorizontalFlip(self.transform_config["horizontal_flip_prob"]),
@@ -52,18 +53,20 @@ class Transform(object):
         ])
 
     def val_transforms(self): 
+        logger.info("Validation transforms returned")
         return A.Compose([
             A.Resize(self.transform_config["image_size"], self.transform_config["image_size"]),
             A.Normalize(),
         ])
 
     def test_transforms(self): 
+        logger.info("Testing transforms returned")
         return A.Compose([
             A.Resize(self.transform_config["image_size"], self.transform_config["image_size"]),
             A.Normalize(),
         ])  
     
 
-if __name__ == "__main__":
-    transform = Transform("train").get_transforms()
-    print(transform)
+# if __name__ == "__main__":
+#     transform = Transform("train").get_transforms()
+#     logger.info(transform)

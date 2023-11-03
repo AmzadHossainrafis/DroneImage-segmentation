@@ -78,8 +78,13 @@ if all the configaration is set properly you can run the following command to te
 ```
 
 ## Results 
+![Alt text](fig/image/preiction_1.png)
+![Alt text](fig/image/preiction_2.png)
 
-1. The model was trained for 10 epochs with batch size of 4 and learning rate of 0.001.
+
+## Test and Train matrics score and loss 
+
+
 
 
 

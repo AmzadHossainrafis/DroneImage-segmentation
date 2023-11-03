@@ -21,7 +21,7 @@ def get_requirements(filename):
 
 #setup 
 setup( 
-    name='Drondata_Segmentation', 
+    name='DronVid', 
     version='1.0', 
     packages=find_packages(), 
     include_package_data=True, 

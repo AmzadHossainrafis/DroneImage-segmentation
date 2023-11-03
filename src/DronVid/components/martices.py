@@ -4,9 +4,6 @@ import numpy as np
 
 
 #funtion iou 
-
-
-
 class IOU(nn.Module): 
     def __init__(self, n_classes=22):
         super().__init__()

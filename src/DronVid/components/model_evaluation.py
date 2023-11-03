@@ -1,7 +1,7 @@
 import torch 
 import torch.nn as nn 
-
-
+from utils.logger import logger
+logger.info("Importing ModelEvaluation class from model_evaluation.py")
 
 class ModelEvaluation: 
     '''
@@ -45,6 +45,4 @@ class ModelEvaluation:
                 loss += self.criterion(outputs, labels).item()
                 accuracy += self.calculate_accuracy(outputs, labels)
         return loss / len(data_loader), accuracy / len(data_loader)
-    
-
     

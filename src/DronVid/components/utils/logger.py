@@ -25,4 +25,4 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("Camvid_segmentation")
+logger = logging.getLogger("CAMVID")

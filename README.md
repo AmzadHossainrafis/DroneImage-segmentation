@@ -65,17 +65,13 @@ Please confirm all the configurations in the `config.py` file before training.
 
 1. Run the following command to train the model 
 ```bash
-    $ cd src\DronVid\components
-    $ python train.py 
+    $ cd src\DronVid\pipeline/
+    $ python train_pipeline.py
 
 ```
 
 
-## How to test 
-if all the configaration is set properly you can run the following command to test the model 
-```bash
-    $ python test.py 
-```
+
 
 ## Results 
 ![Alt text](fig/image/preiction_1.png)

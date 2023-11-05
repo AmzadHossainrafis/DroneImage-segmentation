@@ -1,6 +1,6 @@
 import torch 
 import torch.nn as nn 
-from utils.logger import logger
+from DronVid.components.utils.logger import logger
 logger.info("Importing ModelEvaluation class from model_evaluation.py")
 
 class ModelEvaluation: 

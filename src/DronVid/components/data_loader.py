@@ -2,11 +2,16 @@ import numpy as np
 from PIL import Image 
 from torch.utils.data import Dataset
 import albumentations as A
-from utils.common import read_yaml
+from DronVid.components.utils.common import read_yaml
+from DronVid.components.utils.logger import logger
+
+logger.info("Data loader is loading")
+
 
 # from data_transformation import Transform
 
-config = read_yaml("../../../config/config.yaml") 
+config = read_yaml("config/config.yaml") 
+
 
 
 ''' 

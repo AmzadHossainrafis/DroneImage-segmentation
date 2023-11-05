@@ -1,26 +1,29 @@
 Dir : 
   root : /home/username/Projects/ProjectName 
-  data_path : C:\Users\Amzad\Desktop\camvid-segmentation\dataset\DronData/
-  original_data_path : C:\Users\Amzad\Desktop\camvid-segmentation\dataset\DronData\dataset\semantic_drone_dataset\original_images/
-  label_path : C:\Users\Amzad\Desktop\camvid-segmentation\dataset\DronData\dataset\semantic_drone_dataset\label_images_semantic/
+  data_path : G:\CamVid\dataset\DronData/
+  original_data_path : G:\CamVid\dataset\DronData\dataset\semantic_drone_dataset\original_images/
+  label_path : G:\CamVid\dataset\DronData\dataset\semantic_drone_dataset\label_images_semantic/
+  model_dir : G:\CamVid\artifacts/model_ckpt/model_v1.pth
 
 Callback_config: 
 
-  aritifact_path : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/
-  model_ckpt : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts\model_ckpt/
+  aritifact_path : G:\CamVid\artifacts/
+  model_ckpt : G:\CamVid\artifacts\model_ckpt/
   log_dir : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts\logs/
-  fig : C:\Users\Amzad\Desktop\camvid-segmentation\fig/
+  fig : G:\CamVid\fig/
 
 Train_config : 
-
+  num_classes : 22
   batch_size : 20
-  num_epochs : 10
+  epochs : 10
   learning_rate : 0.0001
   momentum : 0.9
   weight_decay : 0.0005
   num_workers : 0
   print_freq : 10
   save_freq : 10
+  device : cuda
+  seed : 42
   
 
 Model_config : 
@@ -47,9 +50,9 @@ Data_injection :
   train_split : 0.8
   val_split : 0.1
   test_split : 0.1
-  train_csv : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/train.csv
-  val_csv : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/val.csv
-  test_csv : C:\Users\Amzad\Desktop\camvid-segmentation\artifacts/test.csv
+  train_csv : G:\CamVid\artifacts\train.csv
+  val_csv : G:\CamVid\artifacts\val.csv
+  test_csv : G:\CamVid\artifacts\test.csv
 
 
 

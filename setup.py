@@ -1,35 +1,29 @@
-from setuptools import setup, find_packages 
-from typing import List 
+import setuptools
 
-def get_requirements(filename): 
-    '''
-    args: 
-        filename: name of the file containing the list of requirements
-    returns:
-        list of requirements
-    summary: 
-        reads the file and returns the list of requirements         
-    
-    '''
-    requirements = [] 
-    with open(filename, 'r') as f:
-        for line in f.readlines():
-            requirements.append(line.strip())
-        if '-e .' in requirements:
-            requirements.remove('-e .')
-    return requirements
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
 
-#setup 
-setup( 
-    name='DronVid', 
-    version='1.0', 
-    packages=find_packages(), 
-    include_package_data=True, 
-    install_requires=get_requirements('requirements.txt'),
-    author='Amzad Rafi',
-    author_email='amzad.rafi@northsouth.edu',
-    description='Drondataset Segmentation for segmentation',
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
-  
-)   
+
+__version__ = "0.0.0"
+
+REPO_NAME = "CAMVID"
+AUTHOR_USER_NAME = "Amzad hossain"
+SRC_REPO = "DronVid"
+AUTHOR_EMAIL = "amzad.rafi@northsouth.edu"
+
+
+setuptools.setup(
+    name=SRC_REPO,
+    version=__version__,
+    author=AUTHOR_USER_NAME,
+    author_email=AUTHOR_EMAIL,
+    description="A small python package for CNN app",
+    long_description=long_description,
+    long_description_content="text/markdown",
+    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
+    project_urls={
+        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
+    },
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src")
+)

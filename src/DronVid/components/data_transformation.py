@@ -1,8 +1,10 @@
 import albumentations as A 
-from utils.common import read_yaml 
-from utils.logger import logger
+# from utils.common import read_yaml 
+# from utils.logger import logger
+from DronVid.components.utils.common import read_yaml
+from DronVid.components.utils.logger import logger
+config = read_yaml("config/config.yaml") 
 
-config = read_yaml("../../../config/config.yaml") 
 
 
 
@@ -21,16 +23,16 @@ class Transform(object):
         image: transformed image 
         mask: transformed mask 
     """
-    def __init__(self, transform_type) -> None:
+    def __init__(self,) -> None:
         self.transform_config = config["Transform_config"]
-        self.transform_type = transform_type
+        
 
-    def get_transforms(self):
-        if self.transform_type == 'train':
+    def get_transforms(self, transform_type):
+        if transform_type == 'train':
             return self.train_transforms()
-        elif self.transform_type == 'val':
+        elif transform_type == 'val':
             return self.val_transforms()
-        elif self.transform_type == 'test':
+        elif transform_type == 'test':
             return self.test_transforms()
         else:
             raise ValueError(f'Invalid transform type {self.transform_type}')
@@ -66,7 +68,3 @@ class Transform(object):
             A.Normalize(),
         ])  
     
-
-# if __name__ == "__main__":
-#     transform = Transform("train").get_transforms()
-#     logger.info(transform)

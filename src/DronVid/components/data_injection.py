@@ -1,14 +1,12 @@
-import os 
+
 import numpy as np 
 import pandas as pd
-import PIL.Image as Image
-from utils.common import * 
-from Camvid_segmentation import logger 
+from DronVid.components.utils.common import read_yaml 
+from DronVid.components.utils.logger import logger
 from tqdm import tqdm
-from utils.logger import logger 
 
 
-config = read_yaml(r"../../../config/config.yaml") 
+config = read_yaml(r"config\config.yaml") 
 
 
 
@@ -26,8 +24,8 @@ class DataIjection():
      none
 
     """
-    def __init__(self, data_dir):
-        self.data_dir = data_dir 
+    def __init__(self,):
+        self.data_dir = config["Dir"]["original_data_path"]
         self.injection_config = config["Data_injection"]
 
     def inject(self,X):
@@ -77,20 +75,6 @@ class DataIjection():
             raise e
         
   
-
-# if __name__ == "__main__":
-#     data_dir = config["Dir"]["original_data_path"]
-#     df = create_df(data_dir)
-#     X = df["id"].values
-#     data_injection = DataIjection(data_dir)
-#     train, test, val = data_injection.inject(X)
-#     print(train.shape)
-#     print(test.shape)
-#     print(val.shape)
-#     print(train)
-#     print(test)
-#     print(val)
-
 
 
 

@@ -11,6 +11,4 @@ pillow
 segmentation-models-pytorch
 -f https://download.pytorch.org/whl/torch_stable.html
 torch== 1.13.0+cpu
-
-
 -e .

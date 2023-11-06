@@ -79,7 +79,7 @@ Please confirm all the configurations in the `config.py` file before training.
 
 
 ## Test and Train matrics score and loss 
-
+![Alt text](fig/image/demo_loss_graph.png)
 
 
 

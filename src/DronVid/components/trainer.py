@@ -2,6 +2,7 @@ from tqdm import tqdm
 import torch
 from DronVid.components.utils.logger import logger
 from DronVid.components.utils.common import read_yaml
+from torch.cuda.amp import autocast, GradScaler
 
 
 
@@ -30,8 +31,10 @@ class Trainer:
         self.optimizer = optimizer
         self.device = device
         self.best_val_loss = float('inf')
+        scaler= GradScaler()
 
     def train_step(self, dataloader):
+        scaler = GradScaler()
         self.model.train()
         total_loss = 0.0
         pbar = tqdm(enumerate(dataloader), total=len(dataloader), desc="Training")
@@ -39,10 +42,12 @@ class Trainer:
             x = x.to(self.device)
             y = y.to(self.device)
             self.optimizer.zero_grad()
-            y_hat = self.model(x)
-            loss = self.criterion(y_hat, y)
-            loss.backward()
-            self.optimizer.step()
+            with autocast():
+                y_hat = self.model(x)
+                loss = self.criterion(y_hat, y)
+            scaler.scale(loss).backward()
+            scaler.step(self.optimizer)
+            scaler.update()
             total_loss += loss.item()
             pbar.set_postfix({'loss': total_loss / (i + 1)})
         pbar.close()
@@ -55,8 +60,9 @@ class Trainer:
             for i, (x, y) in pbar:
                 x = x.to(self.device)
                 y = y.to(self.device)
-                y_hat = self.model(x)
-                loss = self.criterion(y_hat, y)
+                with autocast():
+                    y_hat = self.model(x)
+                    loss = self.criterion(y_hat, y)
                 total_loss += loss.item()
                 pbar.set_postfix({'loss': total_loss / (i + 1)})
         pbar.close()

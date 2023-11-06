@@ -1,1 +1,1 @@
-python-3.8.18 -m pip install --upgrade pip
+python 3.10

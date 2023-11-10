@@ -14,7 +14,7 @@ Callback_config:
 
 Train_config : 
   num_classes : 22
-  batch_size : 20
+  batch_size : 8
   epochs : 10
   learning_rate : 0.0001
   momentum : 0.9

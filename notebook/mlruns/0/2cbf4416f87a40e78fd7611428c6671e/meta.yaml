@@ -1,0 +1,15 @@
+artifact_uri: file:///g:/CamVid/notebook/mlruns/0/2cbf4416f87a40e78fd7611428c6671e/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2cbf4416f87a40e78fd7611428c6671e
+run_name: adorable-rook-370
+run_uuid: 2cbf4416f87a40e78fd7611428c6671e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700082737734
+status: 1
+tags: []
+user_id: Amzad

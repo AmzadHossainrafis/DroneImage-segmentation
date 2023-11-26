@@ -1,16 +1,15 @@
-from tqdm import tqdm 
+from tqdm import tqdm
 import torch
 from DronVid.components.utils.logger import logger
 from DronVid.components.utils.common import read_yaml
 from torch.cuda.amp import autocast, GradScaler
-import mlflow 
+import mlflow
 
 
+config = read_yaml("config/config.yaml")
 
-config = read_yaml("config/config.yaml")   
 
-
-'''
+"""
 Bug report: 
 
 
@@ -25,10 +24,7 @@ Bug report:
             TypeError: cannot unpack non-iterable NoneType object
 
 
-'''
-
-
-
+"""
 
 
 class Trainer:
@@ -39,7 +35,7 @@ class Trainer:
     validate_step: validate the model for one epoch
     save_model: save the model with lowest validation loss
     train: train the model for given number of epochs and save the best model
-    
+
 
     args:
         model: model to train
@@ -57,8 +53,7 @@ class Trainer:
         self.criterion = loss
         self.optimizer = optimizer
         self.device = device
-        self.best_val_loss = float('inf')
-
+        self.best_val_loss = float("inf")
 
     def train_step(self, dataloader):
         scaler = GradScaler()
@@ -76,7 +71,7 @@ class Trainer:
             scaler.step(self.optimizer)
             scaler.update()
             total_loss += loss.item()
-            pbar.set_postfix({'loss': total_loss / (i + 1)})
+            pbar.set_postfix({"loss": total_loss / (i + 1)})
         pbar.close()
 
     def validate_step(self, dataloader):
@@ -91,7 +86,7 @@ class Trainer:
                     y_hat = self.model(x)
                     loss = self.criterion(y_hat, y)
                 total_loss += loss.item()
-                pbar.set_postfix({'loss': total_loss / (i + 1)})
+                pbar.set_postfix({"loss": total_loss / (i + 1)})
         pbar.close()
         return total_loss / len(dataloader)
 
@@ -109,7 +104,7 @@ class Trainer:
             mlflow.log_param("device", str(self.device))
             mlflow.log_param("loss", str(self.criterion))
 
-            for epoch in range(epochs-1):
+            for epoch in range(epochs - 1):
                 self.train_step(train_dl)
                 val_loss = self.validate_step(val_dl)
                 if val_loss < self.best_val_loss:
@@ -122,14 +117,5 @@ class Trainer:
 
                 # Log metrics
                 mlflow.log_metric("val_loss", val_loss, step=epoch)
-                mlflow.log_metric("best_val_loss", self.best_val_loss, step=epoch)    
+                mlflow.log_metric("best_val_loss", self.best_val_loss, step=epoch)
             return self.train_loss, self.val_loss
-
-  
-       
-        
-        
-
-
-        
-
